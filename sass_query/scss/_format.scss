@@ -1,0 +1,61 @@
+/*Text Formatting*/
+h1, h2, h3, h4, h5, h6 {
+	margin: 10px;
+	font-family: balboa, sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	color: $blk;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+h3 {
+	margin-bottom: 0.25rem;
+}
+
+h3+p {
+	margin-top: 0.25rem;
+}
+
+p {
+	text-indent: 2em;
+}
+
+a {
+	color: $blk;
+
+    &:hover {
+        color: $dkgry;
+    }
+}
+/*Text Formatting END*/
+/*Code Formatting*/
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+	margin-bottom: 2rem;
+}
+
+code {
+  border: 5px #82e3fb solid;
+  border-radius: $radius;
+}
+
+pre code.hljs, code.hljs {
+  padding: 10px;
+}
+
+.hljs-selector-tag {
+	color: cyan;
+}
+
+.hljs-attribute {
+	color: #C98BFB;
+}
+
+.hljs-string, .hljs-number {
+	color: #EF9D21;
+}
+/*Code Formatting END*/

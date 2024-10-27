@@ -1,0 +1,23 @@
+@imnport "style.css";
+main {
+  margin: 10px 100px;
+}
+
+#useSites {
+  max-width: 900px;
+  margin: auto;
+}
+
+.left-circle {
+  float: left;
+  width: 150px;
+  shape-outside: circle(90px);
+  margin: 10px;
+}
+
+.left-rec {
+  float: left;
+  width: 120px;
+  margin: 20px;
+}
+/*# sourceMappingURL=freestyle.css.map */

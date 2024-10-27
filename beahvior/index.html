@@ -1,0 +1,145 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+      Javascript Page
+    </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+    <link rel="stylesheet" href="../fonts.css">
+    <link href="style.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+<header>
+    <section class="full-mountain-image">
+    <nav class="">
+    <div class="buttonLayout">
+        <button class="rock-button">
+            <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+              <!-- River rock shape -->
+              <path d="M50,100 
+                       C20,60 130,20 200,60 
+                       C270,100 240,150 170,160 
+                       C100,170 80,140 50,100 
+                       Z" 
+                    fill="#C7C7BA" stroke="#7b6d61" stroke-width="3" />
+              <!-- Text inside the button -->
+              <text x="150" y="120" class="rock-button-text" text-anchor="middle" dominant-baseline="middle">
+                <a href="../index.html">Home</a>
+              </text>
+            </svg>
+            </button>
+            <button class="rock-button">
+            <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- River rock shape -->
+                <path d="M50,100 
+                         C20,60 130,20 200,60 
+                         C270,100 240,150 170,160 
+                         C100,170 80,140 50,100 
+                         Z" 
+                      fill="#C7C7BA" stroke="#7b6d61" stroke-width="3" />
+                <!-- Text inside the button -->
+                <text x="150" y="120" class="rock-button-text" text-anchor="middle" dominant-baseline="middle">
+                  <a href="../Secondary/AboutUs.html">About Me</a>
+                </text>
+              </svg>
+            </button>
+              <button class="rock-button">
+              <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- River rock shape -->
+                <path d="M50,100 
+                         C20,60 130,20 200,60 
+                         C270,100 240,150 170,160 
+                         C100,170 80,140 50,100 
+                         Z" 
+                      fill="#C7C7BA" stroke="#7b6d61" stroke-width="3" />
+                <!-- Text inside the button -->
+                <text x="150" y="120" class="rock-button-text" text-anchor="middle" dominant-baseline="middle">
+                  <a href="">Contact US</a>
+                </text>
+              </svg>
+              </button>
+    </div>
+    <div class="SideHero">
+        <h1 >Welcome to my Javascript Page</h1>
+        <p>I designed this page to look more modern. And what isn't modern about a full view hero image. With that in mind, an idea hit me, adding effects to the hero image itself, and as someone who enjoys nature, I decided water was the best visual to do this on.</p>
+        </div>
+    </nav>
+    </section>
+</header>
+<!-- Main Content Section -->
+<main>
+    <section id="SecondaryNav">
+        <nav class="StickyNav">
+            <button a href="../index.html">Home</a></button>
+            <button a href="../Secondary/ContactUs.html">Contact Us</a></button>
+            <button a href="../Secondary/AboutUs.html">About Us</a></button>
+        </nav>
+        <!-- Hamburger Icon -->
+        <div class="ham-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+
+<!-- Offscreen Menu -->
+ <nav>
+<div class="off-screen-menu">
+  <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../Secondary/ContactUs.html">Contact Us</a></li>
+      <li><a href="../Secondary/AboutUs.html">About Us</a></li>
+  </ul>
+  </div>
+  </nav>
+    </section>
+    <section class="MainBody">
+    <!-- Article Section -->
+    <article class="MainTextBox">
+        <h2>What I've Done</h2>
+<p>I looked around and found a neat ripple effect, using Jquery, I use it on an image which is a river, making it look like you can create small waves on the water.</p>        
+        <h3>Hamburger menu</h3>
+<p>I used css, html, and Javascript to make my hamburger menu, with an offscreen element for the menu it connects to.</p>
+    <p>For the Widget, I looked up a form, and used it as a basis then expanded it by using Javascript to apply a message after using the previously mentioned form.</p>
+</article>
+
+    <!-- Sidebar Section -->
+    <aside class="SideNav">
+        <h3>Sidebar Widget</h3>
+      <!-- Main Form -->
+      <form class="pure-form" id="signup-form">
+        <fieldset>
+            <legend>A compact inline form</legend>
+            <input type="email" placeholder="Email" id="email" required />
+            <input type="password" placeholder="Password" id="password" required />
+            <label for="default-remember">
+                <input type="checkbox" id="default-remember" /> Remember me
+            </label>
+            <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+        </fieldset>
+    </form>
+
+    <!-- Lightbox (Initially Hidden) -->
+    <div class="lightbox" id="thank-you-lightbox">
+        <div class="lightbox-content">
+            <h2>Thank you for signing up!</h2>
+            <p>We're excited to have you on board.</p>
+            <button id="close-lightbox" class="pure-button pure-button-secondary">Close</button>
+        </div>
+    </div>
+    </aside>
+    </section>
+
+</main>
+
+<!-- Footer Section -->
+<footer>
+    <p>&copy; 2024 James Diener.</p>
+</footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>

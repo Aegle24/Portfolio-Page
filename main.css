@@ -1,0 +1,172 @@
+.mainNav{
+display: flex;
+flex-direction: row;
+width:100%;
+justify-content: center;
+}
+.mainNav a{
+    color:#333;
+    padding:5px;
+}
+.mainNav a:hover{
+    color:#ff0000;
+}
+
+.ham-menu{
+    display:none;
+}
+
+body{
+width:100%;
+margin:0px;
+}
+#Hero{
+    display:flex;
+    flex-direction: row;
+    margin:60px 196px;
+    column-gap: 50px;
+}
+.HeroBox{
+    align-items: center;
+    text-align: center;
+    background-color: #00009E;
+    color:#fff;
+    padding:1em;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/*
+FIGURE OUT CENTERING THIS ELEMENT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+*/
+#AboutMe {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    min-height: 400px; /* Ensure there is enough height for vertical centering */
+}
+
+.TextBox {
+    color: #333;
+    padding: 1em;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically inside TextBox */
+    align-items: center; /* Center content horizontally inside TextBox */
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Grid{
+    margin: 0 196px 30px;
+    display: grid;
+    grid-template-columns: 55% 25% 20%;
+    grid-template-rows:repeat(5, 1fr) ;
+    gap: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.Column1{
+    background-color: #f6f6f6;
+    color:#333;
+    grid-column: span 1;
+    grid-row: span 4;
+    padding:1em;
+    border-top-left-radius: 4px;
+    word-wrap: break-word; /* Forces long words or URLs to break and wrap */
+    box-sizing: border-box; /* Ensures padding and borders don't push content out of the box */
+}
+.Column1 a{
+    color:#333;
+}
+.Column1 a:hover{
+    color:#00009E;
+}
+.Column2A{
+    grid-column: span 2;
+    grid-row: span 5;
+    background-image: url(images/Deco1.png);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4[x];
+}
+.Column3{
+    background-color: #333;
+    grid-column: auto;
+    grid-row: auto;
+    border-bottom-left-radius: 4px;
+}
+.Column3 p{
+    padding-left: 1em;
+}
+.Column3 a{
+    color:#fff;
+}
+.Column3 a:hover{
+    color:#FF7D01;
+}
+
+.Column2B{
+    background-image: url(images/Deco2.png);
+    grid-column: span 2;
+    grid-row: span 5;
+}
+
+.Column2C{
+    background-image: url(images/Deco3.png);
+    grid-column: span 2;
+    grid-row: span 5;
+}
+
+.Column2D{
+    background-image: url(images/Deco3.png);
+    grid-column: span 2;
+    grid-row: span 5;
+}
+
+@media screen and (max-width: 1020px){
+
+    .ham-menu{
+        display:flex;
+    }
+    .mainNav{
+        display:none;
+        }
+    .Grid{
+        width:90vw;
+        margin:5%; 
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr;
+    }
+    #Hero{
+        flex-direction: column;
+        width:100%;
+        margin:0px;
+    }
+    .HeroBox{
+        margin-bottom: 5px;
+        width:100%;
+    }
+    #AboutMe {
+        margin-top:5%;
+    }
+    .TextBox{
+        margin:0px;
+        width: 80%;
+    }
+    .Column1 {
+        width: 100%; /* Ensure full-width in mobile */
+    }
+
+    .Column1 p {
+        word-wrap: break-word; /* Ensure p elements wrap within the column */
+        white-space: normal; /* Make sure the text wraps properly */
+        overflow-wrap: break-word; /* Break long words when necessary */
+    }
+    .Column2A, .Column2B, .Column2C{
+        display:none;
+    }
+    .Column3{
+        border-bottom-right-radius: 4px;
+    }
+}

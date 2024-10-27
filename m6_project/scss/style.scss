@@ -1,0 +1,45 @@
+$bkcolor: #e4DAC7 ;
+$padding: 20px;
+$InsidePadding: 1em;
+$whiteBk:#fff;
+$borderRad:50%;
+$Green:#0c9676;
+body{
+    background-color: $bkcolor;
+}
+
+nav{
+    padding:$InsidePadding;
+}
+svg{
+    display:flex;
+    width:50px;
+    background-color:$whiteBk;
+    border-radius:$borderRad;
+    margin: 10px;
+}
+.topContainer{
+    display:flex;
+    flex-direction: row;
+    padding-right: $padding;
+    background-color: $Green;
+}
+
+.textBox{
+    width:calc(4em + 50vw);
+    margin: 2vw;
+
+    p{
+        margin-top: 0px;
+        background-color:#f6f6f6;
+        padding: $InsidePadding;
+    }
+}
+
+a:hover{
+
+    svg{
+        color:rgb(148, 0, 0);
+    }
+
+}

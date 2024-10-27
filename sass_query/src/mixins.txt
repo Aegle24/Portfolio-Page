@@ -1,0 +1,19 @@
+@mixin margin-l($all, $left) {
+    margin: $all $all $all $left;
+}
+
+@mixin doubleBorderB($color) {
+    border-bottom: $color double 20px;
+}
+
+@mixin qmax($sz) {
+    @media screen and (max-width: $sz) {
+        @content;
+    }
+}
+
+@mixin qmin($sz) {
+	@media screen and (min-width: $sz) {
+		@content;
+	}
+}

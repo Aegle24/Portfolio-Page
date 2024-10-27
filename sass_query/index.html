@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M08 Special</title>
+<!--Fonts-->
+	<link rel="stylesheet" href="https://use.typekit.net/nwu8vau.css">
+<!--Font Awesome-->
+	<script src="https://kit.fontawesome.com/809e545258.js" crossorigin="anonymous"></script>
+<!--Code Highlighter-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+<!--Mine-->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<header>
+		<img src="images/planetsRingLine.png" alt="">
+		<h1>Container Queries</h1>
+		<a class="visually-hidden" href="#main">Skip to main content</a>
+<nav class="topnav" id="myTopnav">
+	<a href="javascript:void(0);" class="icon" onclick="myNav()"><span class="hide">Mobile</span><i class="fa-solid fa-bars"></i>
+	  </a>
+	  <div id="myLinks">
+	<a href="index.html" class="active">Containers</a>
+	<a href="freelance/freelance.html">Freelance</a>
+</div>
+  </nav>
+	</header>
+	<main id="main">
+		<section class="box feat"><!--Container 01 section-->
+			<div>
+				<h2>Container 01</h2>
+				<p>The first set of containers we have made are these light blue boxes. The items of this container are the div, the h2 element, the paragraph and the element we have applied the feat-item class to. In this container, it’s the code snippet. In the second container, it’s the image. In order to let the browser know which element is the container, we use the container-type property and set it to inline-size. </p>
+				<p>There are three possible values we could have set container-type to:</p>
+				<dl>
+					<dt>Inline-size</dt>
+					<dd>Typically this is the width but since it uses the inline direction, for some elements, it could be the height.</dd>
+					<dt>Size</dt>
+					<dd>This uses both the inline and block direction which is the height and width.</dd>
+					<dt>Normal</dt>
+					<dd>This is used to query not the size but the style of the element. This is still experimental and not fully supported so it is advised to stay away from this value for now.</dd>
+				</dl>
+				</div><!--Container 01 text END-->
+			<pre class="feat-item"><code>
+.feat {
+	display: flex;
+	flex-direction: column;
+	container-type: inline-size;
+	/*Other statements*/
+}
+
+.feat-item {
+	width: 100%;
+	min-width: 300px;
+	margin: auto;
+	padding: 20px;
+}
+
+@container (max-width: 700px) {
+	.feat-item {
+		min-width: 250px;
+		padding: 10px;
+		
+		@include qmax($mobile) {
+			padding: 0;
+		}
+	}
+}
+			</code></pre>
+		</section><!--Container 01 END-->
+		<section class="box feat"><!--Container 02 section-->
+			<img class="feat-item" src="images/rocket.svg" alt="">
+			<div>
+				<h2>Container 02</h2>
+				<p>We created a query so when the container is 700 pixels or less. It will set the min-width of the feat-item to 250px. We also add a padding of 10 pixels around it. When the container is larger than 700 pixels, the min-width of feat-item is 300 pixels. </p>
+				<p>Here are a couple things you need to keep in mind when working with container-queries:</p>
+				<ul>
+					<li>You can’t change the characteristics of the container with a container query. In our code, we can change the properties of div, h2, paragraph, pre, and even code. But we can’t affect the section tag we applied the class feat to.</li>
+					<li>In order to use a container query, you need to assign at minimum the container-type property to an element. You can apply container-name as well but it is not required.</li>
+					<li>In order to use a container query, you need to assign at minimum the container-type property to an element. You can apply container-name as well but it is not required.</li>
+					<li>To apply the type and name on the same line use the syntax container: name/type;</li>
+					<li>With container queries came new units of measure. Some of these units are container width and height (cqw/cqh), container logical directions (cqi/cqb), container minimum and maximum lengths (cqmin/cqmax), ch, etc.</li>
+					<li>Container style queries are experimental and can only evaluate custom CSS properties right now.</li>
+				</ul>
+				</div><!--Container 02 Text END-->
+		</section><!--Container 02 END-->
+		<section><!--Cards Container Section-->
+				<h2>Container 03</h2>
+				<p>Below I have applied another container to the grid of cards. This time I named it cards so it only affects this container. I measure the container by how many characters wide it is and I use it to change the layout of the grid within the individual cards.</p>
+			<h3>The Code:</h3>
+				<pre><code>
+@container cards (min-width: 60ch) {
+	.card {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		
+		h3 {
+			margin-top: auto;
+		}
+		
+		p {
+			grid-column: 1 / 3;
+		}
+	}
+}
+
+@container cards (width &gt; 200ch) {
+	.card {
+		display: block;
+	}
+}
+				</code></pre>
+			<h3>The Cards:</h3>
+				<div class="deck"><!--Container DECK-->
+					<article class="card">
+						<img src="images/space_1920.jpg" alt="title image">
+						<h3>Title 01</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cupiditate deserunt facilis a dolore quae. Soluta ab tempore libero molestiae eos itaque repellat placeat in eum esse, consequuntur voluptate, cumque provident quaerat repellendus. Adipisci id natus fugit unde voluptatibus obcaecati numquam voluptatem facilis beatae rem!</p>
+					</article>
+					<article class="card">
+						<img src="images/space_1920.jpg" alt="title image">
+						<h3>Title 02</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cupiditate deserunt facilis a dolore quae. Soluta ab tempore libero molestiae eos itaque repellat placeat in eum esse, consequuntur voluptate, cumque provident quaerat repellendus. Adipisci id natus fugit unde voluptatibus obcaecati numquam voluptatem facilis beatae rem!</p>
+					</article>
+					<article class="card">
+						<img src="images/space_1920.jpg" alt="title image">
+						<h3>Title 03</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cupiditate deserunt facilis a dolore quae. Soluta ab tempore libero molestiae eos itaque repellat placeat in eum esse, consequuntur voluptate, cumque provident quaerat repellendus. Adipisci id natus fugit unde voluptatibus obcaecati numquam voluptatem facilis beatae rem!</p>
+					</article>
+					<article class="card">
+						<img src="images/space_1920.jpg" alt="title image">
+						<h3>Title 04</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cupiditate deserunt facilis a dolore quae. Soluta ab tempore libero molestiae eos itaque repellat placeat in eum esse, consequuntur voluptate, cumque provident quaerat repellendus. Adipisci id natus fugit unde voluptatibus obcaecati numquam voluptatem facilis beatae rem!</p>
+					</article>
+					<article class="card">
+						<img src="images/space_1920.jpg" alt="title image">
+						<h3>Title 05</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cupiditate deserunt facilis a dolore quae. Soluta ab tempore libero molestiae eos itaque repellat placeat in eum esse, consequuntur voluptate, cumque provident quaerat repellendus. Adipisci id natus fugit unde voluptatibus obcaecati numquam voluptatem facilis beatae rem!</p>
+					</article>
+					<article class="card">
+						<img src="images/space_1920.jpg" alt="title image">
+						<h3>Title 06</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat cupiditate deserunt facilis a dolore quae. Soluta ab tempore libero molestiae eos itaque repellat placeat in eum esse, consequuntur voluptate, cumque provident quaerat repellendus. Adipisci id natus fugit unde voluptatibus obcaecati numquam voluptatem facilis beatae rem!</p>
+					</article>
+			</div><!--Container deck END-->
+		</section><!--Cards Container Section END-->
+	</main>
+	<footer>
+		<p>HSilvia &copy;2024</p>
+		<script src="scripty.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+		<script>hljs.highlightAll();</script>
+	</footer>
+</body>
+</html>

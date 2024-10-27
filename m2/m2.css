@@ -1,0 +1,124 @@
+.hero{
+	background-image: url('../images/HeaderHero.jpg');
+	object-fit: cover;
+	height:100vh;
+	background-repeat: none;
+}
+
+.HeroNav{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	padding:2em 0px;
+	justify-content: space-evenly;
+	position:relative;
+    align-self: center;
+}
+
+.HeroNav a{
+    color:#fff;
+    Font-size: clamp(1em, 2em, 3em);
+}
+
+.sticky{
+    width:100%;
+	background-color: #D9E1FE;
+	color:#333;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+.stickyNav{
+	padding:1em;
+	display: flex;
+	justify-content: space-around;
+    align-items:center;
+}
+.stickyNav a{
+    color:#333;
+
+}
+.flip{
+	display: flex;
+	flex-flow: wrap;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+.block{
+	padding: .5em;
+	margin:10px;
+	width: 22%;
+	background-color: #BEE7E8;
+	display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    border-radius: 6px;
+}
+.block p {
+	width: 80%;
+	
+}
+.Deco{
+    aspect-ratio: 16/9;
+	width:150px;
+	justify-content: center;
+}
+.MultiCol{
+	background-color: #f6f6f6;
+	column-count: 5;
+    margin: 20px 0px;
+}
+.MultiCol p{
+    padding:1em;
+}
+.wordWrap{
+	display: block;
+}
+.MultiTree {
+	position: relative;
+	width: 300px;
+	height: auto;
+	shape-outside: ellipse(70px 220px at 70px 220px);
+	float: right;
+}
+
+/*Tablet RWD
+*/
+@media (max-width: 1024px)
+{
+	.flip {
+        flex-direction: column; 
+    }
+
+    .block {
+        width: 50%; 
+    }
+
+    .MultiCol {
+        column-count: 3; 
+    }
+
+    .MultiTree {
+        width: 200px; 
+        float: right; 
+    }
+}
+/*
+Phone SRWD
+*/
+@media (max-width: 767px) {
+	.flip {
+        flex-direction: column;
+    }
+
+    .block {
+        width: 80%; 
+    }
+
+    .MultiCol {
+        column-count: 1; 
+    }
+}

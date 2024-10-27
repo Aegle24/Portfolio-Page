@@ -1,0 +1,124 @@
+
+body {
+ background-color: #f6f6f6;
+ margin:0;
+} 
+
+.Hero{
+    background-image: url(../images/Cloud.png);
+    width: 100%;
+    margin:0;
+    height:30vh;
+}
+h1{
+    margin-left: 1em;
+    color:#fff;
+    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);;
+}
+.grid{
+display: grid;
+grid-template-columns: [content-start]auto [content-end aside-start] 25vw [aside-end];
+grid-template-rows: [content-start aside-start]auto 25vh[content-end aside-end];
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+.m2{
+    margin:0px 1em;
+    grid-column: content-start / content-end;
+    grid-row:content-start / content-end;
+    padding:1em;
+}
+.aside{
+    grid-column: aside-start / aside-end;
+    grid-row:aside-start / aside-end;
+    padding:1em;
+    margin:1em 2em;
+    background-color: #fff;
+    border-radius: 10px; 
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.m4{
+    display: flex;  
+    flex-direction: row;
+    justify-content: flex-start; 
+    align-items: flex-start;
+    margin-left: 1em;
+}
+img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+}
+
+.block1, .block2, .block3{
+    display: flex;  
+    flex-direction: column;   
+    justify-content: center; 
+    align-items: center;
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 10px; 
+    margin: 0 .5em 6em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+footer{
+    position: relative;
+    background-color: aliceblue;
+    height:5vh;
+}
+footer p{
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    margin: 0; 
+    padding: 5px
+}
+@media screen and (max-width: 950px) {
+    .grid{
+    display: grid; /* Display as a grid */
+  /* Define a single column layout */
+  grid-template-columns: [content-start] 1fr [content-end];
+  /* Define two rows: content on top and aside underneath */
+  grid-template-rows: [content-start] auto [content-end aside-start] auto [aside-end];
+  grid-column-gap: 0px; /* No gap between columns */
+  grid-row-gap: 0px; /* No gap between rows */
+    }
+  .aside {
+    grid-column: content-start / content-end;
+    grid-row: aside-start / aside-end;
+  }
+  .m4{
+    flex-direction: column;
+  }  
+}
+
+@media print {
+    body {
+      background-color: white;
+      color: black;
+      margin: 0;
+      padding: 1in; 
+    }
+    
+    * {
+      page-break-inside: avoid;
+      box-sizing: border-box;
+    }
+  
+    h1, h2, h3, h4, h5, h6, p, div {
+      display: block; 
+      margin: 0 0 1em; 
+    }
+  
+    a {
+      color: black; 
+      text-decoration: none; 
+    }
+  
+    img {
+     display:none;
+    }
+
+  }
+  
