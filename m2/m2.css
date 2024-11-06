@@ -1,7 +1,8 @@
 .hero{
-	background-image: url('../images/HeaderHero.jpg');
+	background-image: url('../images/HeaderHero.webp');
 	object-fit: cover;
 	height:100vh;
+	width: 100vw;
 	background-repeat: none;
 }
 
